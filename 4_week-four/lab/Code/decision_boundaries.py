@@ -2,14 +2,18 @@ import numpy as np
 from scipy.stats import mode
 
 def linear_decision_boundary_classifier(decision_boundary_line_vec, training_points, training_labels, prediction_points):
-    """
-    decision_boundary_line_vec: Vector representation of a linear decision boundary.  Convert the line to the form Ax + By + ... + C = 0.  Then turn the coefficients into a vector.  So, for example, 5x - y + 2 = 0 will turn into <5, -1, 2>.
     
-    training_points: 2D numpy array of points used to train the model.  The number of columns must be one less than the length of the decision boundary vector.
+    """
+    decision_boundary_line_vec: Vector representation of a linear decision boundary.  Convert the line to the form Ax + By + ... + C = 0.  Then turn the 
+    coefficients into a vector.  So, for example, 5x - y + 2 = 0 will turn into <5, -1, 2>.
+    
+    training_points: 2D numpy array of points used to train the model.  The number of columns must be one less than the length of the decision 
+    boundary vector.
     
     training_labels: training labels as a 1D numpy array.  The length must match the number of rows in training_points.
     
     prediction_points: points to predict labels for as a 1D numpy array.  The number of columns must match the number of columns in training_points.
+
     """
     
     # add column of 1s to match dimension of decision_boundary_line_vec
