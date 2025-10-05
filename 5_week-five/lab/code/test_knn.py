@@ -11,12 +11,14 @@ from sklearn.model_selection import train_test_split
 from knn import KNN
 
 def generate_cluster_samples():
+
     """
     Generates random samples in a 2D space
     from 4 clusters.
     
     Returns tuple of features and labels.
     """
+        
     k = 4
     n_samples = 32
     var = 0.01
