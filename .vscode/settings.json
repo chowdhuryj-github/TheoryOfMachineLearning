@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./9_week-nine/lab/code"
+    ]
+}

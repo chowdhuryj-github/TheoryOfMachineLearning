@@ -7,11 +7,14 @@ from sklearn.metrics import mean_squared_error
 import cost_functions
 
 class TestLinearCostFunction(unittest.TestCase):
+
     def solve_iris_regression(self):
+
         """
         Fits a linear regression model for the Iris data set
         using the normal equation.
         """
+
         iris = datasets.load_iris()
         
         # use sepal length as features
@@ -30,10 +33,12 @@ class TestLinearCostFunction(unittest.TestCase):
         return X, y, betas, pred_y
 
     def test_predict(self):
+
         """
         Tests the predict method using known model
         params
         """
+
         X, y, betas, exp_y = self.solve_iris_regression()
         
         # use cost function predict method
@@ -45,9 +50,11 @@ class TestLinearCostFunction(unittest.TestCase):
         self.assertAlmostEqual(mse, 0.0)
         
     def test_error(self):
+
         """
         Tests the mean-squared error implementation
         """
+
         X, y, _, pred_y = self.solve_iris_regression()
         
         # use cost function predict method
@@ -58,9 +65,11 @@ class TestLinearCostFunction(unittest.TestCase):
         self.assertAlmostEqual(obs_mse, exp_mse)
         
     def test_cost(self):
+
         """
         Tests the cost function.
         """
+
         X, y, betas, pred_y = self.solve_iris_regression()
         exp_mse = mean_squared_error(y, pred_y)
         
@@ -71,12 +80,15 @@ class TestLinearCostFunction(unittest.TestCase):
         self.assertAlmostEqual(cost, exp_mse)
         
 class TestGaussianCostFunction(unittest.TestCase):
+
     def solve_model(self):
+
         """
         Fits the Gaussian model using estimates for
         the mean and variance.
         """
-        data = np.loadtxt("gaussdist.csv", delimiter=",")
+
+        data = np.loadtxt("C:/GitHub/Semester 5/TheoryOfMachineLearning/9_week-nine/lab/data/gaussdist.csv", delimiter=",")
         
         y = data[:, 0]
         X = data[:, 1]
@@ -93,10 +105,12 @@ class TestGaussianCostFunction(unittest.TestCase):
         return X, y, exp_params, pred_y
 
     def test_predict(self):
+
         """
         Tests the predict method using known model
         params
         """
+
         X, y, params, exp_y = self.solve_model()
         
         # use cost function predict method
@@ -106,9 +120,11 @@ class TestGaussianCostFunction(unittest.TestCase):
         self.assertEqual(exp_y.shape, obs_y.shape)
         
     def test_error(self):
+
         """
         Tests the mean-squared error implementation
         """
+
         X, y, _, pred_y = self.solve_model()
         
         # use cost function predict method
@@ -119,9 +135,11 @@ class TestGaussianCostFunction(unittest.TestCase):
         self.assertAlmostEqual(obs_mse, exp_mse)
         
     def test_cost(self):
+
         """
         Tests the cost function.
         """
+
         X, y, params, pred_y = self.solve_model()
         exp_mse = mean_squared_error(y, pred_y)
         
