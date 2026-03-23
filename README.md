@@ -21,7 +21,7 @@ In [Week 5](5_week-five), I look at how the k-nearest neighbors (KNN) algorithm 
 ## Week 6 | Feed Forward Neural Network
 In [Week 6](6_week-six), I use a feedforward neural network (MLP) to train it on a dataset and then visualize the each individual neuron to create decision boundaries. I then evaluate the performance of the network using metrics such as the ROC and AUC curve. 
 
-## Week 7 | Feed Forward Neural Network
+## Week 7 | Logisitic Regression & Decision Trees
 In [Week 7](7_week-seven), I work on problem sets relating to logistic regression and decision trees by analyzing the decision boundaries, calculating the liklihoods, interpreting model weights as well as evaluating the splits using the Gini index. 
 
 ## Week 8 | Support Vector Machines
